@@ -1,8 +1,10 @@
 const express = require('express')
-const controller = require('./controller');
 const app = express()
-const port = 3000
 
+const controller = require('./controller');
+const config = require('./config');
+
+const port = config.hostPort;
 app.get('/', controller.get)
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`))

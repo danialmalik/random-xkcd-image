@@ -1,7 +1,12 @@
 const supertest = require('supertest');
 const assert = require('assert');
 
-const server = supertest('http://localhost:3000');
+const config = require('./config');
+
+const url = config.hostUrl;
+const port = config.hostPort;
+
+const server = supertest(`${url}:${port}`);
 
 const TIMEOUT = 2000;
 
@@ -12,7 +17,6 @@ describe('random xkcd image test',()=> {
         .expect(200)
         .end((err, res)=> {
             if (err) return done(err);
-            console.log(res)
             assert(res.body.hasOwnProperty('url'));
             assert(res.body.hasOwnProperty('title'));
             done()

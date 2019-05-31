@@ -4,7 +4,7 @@
   "description": "Get JSON data for random xkcd comic",
   "main": "index.js",
   "scripts": {
-    "test": "test",
+    "test": "mocha",
     "start": "node index.js"
   },
   "repository": {
