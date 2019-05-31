@@ -1,14 +1,11 @@
 const supertest = require('supertest');
 const assert = require('assert');
 
-const config = require('./config');
+const port = 3000
 
-const url = config.hostUrl;
-const port = config.hostPort;
+const server = supertest(`http://localhost:${port}`);
 
-const server = supertest(`${url}:${port}`);
-
-const TIMEOUT = 2000;
+const TIMEOUT = 5000;
 
 describe('random xkcd image test',()=> {
     it('verfies the correct response from api',(done)=> {
