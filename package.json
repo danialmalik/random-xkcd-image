@@ -1,0 +1,27 @@
+{
+  "name": "random_xkcd_img",
+  "version": "1.0.0",
+  "description": "Get JSON data for random xkcd comic",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "run": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/danialmalik/random-xkcd-img.git"
+  },
+  "keywords": [
+    "xkcd"
+  ],
+  "author": "Danial Malik",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/danialmalik/random-xkcd-img/issues"
+  },
+  "homepage": "https://github.com/danialmalik/random-xkcd-img#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "request": "^2.88.0"
+  }
+}
